@@ -1,3 +1,4 @@
+package livingThing
 import java.util.Scanner;
 
 public class Organism {
