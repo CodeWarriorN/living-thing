@@ -1,4 +1,4 @@
-package livingThing
+package jayank.livingthing;
 import java.util.Scanner;
 
 public class Organism {
