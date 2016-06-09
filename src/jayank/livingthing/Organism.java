@@ -23,7 +23,8 @@ public class Organism{
 		return (byte)((dna & 2032)/16);
 	}
 	
-	public byte strength(){ //in case of a competion or capturing prey probability of succeeding will be proportional to strength.
+	public byte strength(){ //in case of a competion or capturing prey probability of succeeding 
+				//will be proportional to strength.
 		return (byte)((dna & 32256)/512);
 	}
 	
@@ -59,7 +60,8 @@ public class Organism{
 		return sDNA;
 	} 
 	
-	public Color orgColor(){
+	public Color orgColor(){ //The idea is that we will represent Organisms on a 
+				 //2d graph with their color showing there properties.
 		float r=((float)this.strength())/126;
 		float b=((float)this.iEnergy())/126;
 		float g=((float)this.fertility())/126;
@@ -107,20 +109,20 @@ public class Organism{
 	// THE COMMENTED CODE IS FOR TEST USE ONLY.
 	
 
-	public static void main(String[] args) {
-		short i;
-		Scanner s = new Scanner(System.in);
-		while (true) {
+	// public static void main(String[] args) {
+	// 	short i;
+	// 	Scanner s = new Scanner(System.in);
+	// 	while (true) {
 			
-			try {
-				System.out.println("\nEnter a new DNA:");	
-				i = s.nextShort();
-				Organism org = new Organism(i);
-				if (org.dna==0) break;
-				org.showInConsole();
-			} catch(Exception e){
-				System.out.println(e);
-				s.next();
-			}
-		}}
+	// 		try {
+	// 			System.out.println("\nEnter a new DNA:");	
+	// 			i = s.nextShort();
+	// 			Organism org = new Organism(i);
+	// 			if (org.dna==0) break;
+	// 			org.showInConsole();
+	// 		} catch(Exception e){
+	// 			System.out.println(e);
+	// 			s.next();
+	// 		}
+	// 	}}
 }
